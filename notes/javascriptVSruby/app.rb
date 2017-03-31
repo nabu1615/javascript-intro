@@ -2,6 +2,27 @@ name = 'juan'
 uppercase_name = name.upcase
 
 
+if true
+  'truthy'
+elsif fdasdf
+
+else
+  'falsy'
+end
+
+arr = [1,2,3]
+
+new_arr = arr.map.with_index do |n, i|
+  n * 2
+end
+
+sum = arr.reduce(0) do |accu, n|
+  accu + n
+end
+
+
+
+
 def sum(n1, n2) #ARITY
   n1 + n2
 end

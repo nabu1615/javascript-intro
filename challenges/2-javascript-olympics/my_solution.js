@@ -14,6 +14,7 @@ function Athlete (name, height, sport) {
 // 1. Añadir propiedades a objetos
 
 a1 = {
+<<<<<<< HEAD
 	name: 'name1',
 	age: 23
 }
@@ -30,6 +31,41 @@ function addWinToAthletes(athletes, event) {
 		}
 	})
 }
+=======
+  name: 'fasd',
+  age: 12
+}
+
+a2 = {
+  name: 'afsdf',
+  age: 324
+}
+
+
+var name = 'juan'
+
+// Function Declaration
+function name() {
+
+}
+
+// Function Expresssion
+var name = function() {
+  console.o
+}
+
+
+
+
+function addWinToAthletes(athletes, event) {
+  athletes.forEach(function(athlete){
+    athlete.win = function() {
+      console.log(`${this.name} won the ${event}`)
+    }
+  })
+}
+
+
 
 
 addWinToAthletes([a1, a2], 'futbol')

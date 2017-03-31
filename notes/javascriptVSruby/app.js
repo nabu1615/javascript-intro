@@ -3,6 +3,34 @@ uppercase_name = name.toUpperCase
 uppercase_name = name.toUpperCase()
 
 // Funciones son ciudadanos de primer nivel
+if(true) {
+  return 'truthy'
+} else if(condition) {
+
+} else {
+  return 'falsy'
+}
+
+Math.pow(3)
+
+arr = [4,5,6]
+
+arr.map(function(n, i, array){
+  return n * 2
+})
+
+arr.forEach(function(n, i, array){
+  console.log(n)
+})
+
+arr.reduce(function(accu, n){
+  return accu +n
+}, 0)
+
+for(var i = 0; i < 100; i++) {
+  console.log(i)
+}
+
 
 function sum(n1, n2) {
   return n1 + n2
