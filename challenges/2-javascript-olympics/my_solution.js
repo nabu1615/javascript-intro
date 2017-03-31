@@ -5,21 +5,62 @@
 
 // 0. Objetos
 
-
+function Athlete (name, height, sport) {
+	this.name = name;
+	this.height = height;
+	this.sport = sport;
+}
 
 // 1. Añadir propiedades a objetos
 
+a1 = {
+	name: 'name1',
+	age: 23
+}
+
+a2 = {
+	name: 'name2',
+	age: 12
+}
+
+function addWinToAthletes(athletes, event) {
+	athletes.forEach(function (athlete) {
+		athlete.win = function() {
+			console.log(`${this.name} won the ${event}`)
+		}
+	})
+}
 
 
+addWinToAthletes([a1, a2], 'futbol')
+console.log(a1.win())
+console.log(a2.win())
 
 // 2. Voltea un String
 
+function flip(word) {
+	return word.split('').reverse().join('')
+}
+
+console.log(flip('hello'))
 
 
 
 // 3. Remueve numeros impares
 
+var even_odd = [0,1,2,3,4,5,6]
 
+function odd(array) {
+	var odd = []
+	for (var i = 0; i < array.length; i++) {
+		if (array[i] % 2 != 0) {
+			odd[i] = array[i]
+		}
+	}
+	return odd;
+}
+
+console.log(odd(even_odd));
 
 
 // 4. Funcion constructora
