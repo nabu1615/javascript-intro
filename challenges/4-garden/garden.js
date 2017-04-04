@@ -68,8 +68,6 @@ var flowers = [
   new Flower("Chrysanthemum", "yellow"),
 ];
 
-
-
 garden = new Garden("Kula Botanical Garden", "Makawao");
 garden.plant(flowers);
 
