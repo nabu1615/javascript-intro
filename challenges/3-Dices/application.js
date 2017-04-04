@@ -9,11 +9,10 @@
 		this.view = view
 	}
 
-	controller.events = function (){
+	Controller.prototype.events = function (){
     	var that = this;
 
-		$('#roller button.add').on('click', function(e) {
-			debugger;
+		$('#roller button.add').on('click', function() {
 			that.view.create(element)
 		})
 
@@ -22,7 +21,7 @@
 		})
 	}
 
-    controller.roll = function(dice) {
+    Controller.prototype.roll = function(dice) {
     	that = this;
     	var valRan = that.model.random
         $(dice).find('.die').each(function(k, die) {
@@ -36,19 +35,18 @@
 
 	function Model() {}
 
-	model.random = function() {
+	Model.prototype.random = function() {
     	return Math.floor((Math.random() * 6) + 1)
     }
 
    	function View() {}
 
-	view.create = function (die) {
+	View.prototype.create = function (die) {
 		var html = '<div class="die">0</div>';
 		$(die).append(html);
     }
 
-    view.setText = function (die, value) {
+    View.prototype.setText = function (die, value) {
     	$(die).text(value);
     }
-
 }());

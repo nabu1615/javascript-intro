@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>Race</h1>
+<div class="item player__one" id="player-one">
+	<span class="item__title">Jugador 1</span>
+	<div class="item__place">
+		<span data-index="1" class="active"></span>
+		<span data-index="2" class="disable"></span>
+		<span data-index="3" class="disable"></span>
+		<span data-index="4" class="disable"></span>
+		<span data-index="5" class="disable"></span>
+		<span data-index="6" class="disable"></span>
+		<span data-index="7" class="disable"></span>
+		<span data-index="8" class="disable"></span>
+		<span data-index="9" class="disable"></span>
+		<span data-index="10" class="disable"></span>
+	</div>
+</div>
+<div class="item player__two" id="player-two">
+	<span class="item__title">Jugador 2</span>
+	<div class="item__place">
+		<span data-index="1" class="active"></span>
+		<span data-index="2" class="disable"></span>
+		<span data-index="3" class="disable"></span>
+		<span data-index="4" class="disable"></span>
+		<span data-index="5" class="disable"></span>
+		<span data-index="6" class="disable"></span>
+		<span data-index="7" class="disable"></span>
+		<span data-index="8" class="disable"></span>
+		<span data-index="9" class="disable"></span>
+		<span data-index="10" class="disable"></span>
+	</div>
+</div>
+<div class="help">
+	<p>Para Jugar espera que el conteo termine, el <span class="player__one">Jugador 1</span> mueve su carro aprentando la tecla <b>P</b> y el <span class="player__two">Jugador 2</span> la tecla <b>Q</b></p>
+</div>
+<div class="counter">
+	<p><b>La carrera arranca en:</b></p>
+	<p class="counter__number" id="counter">3</p>
+</div>
+<a class="button" id="reset" href="">restart</a>
+<script src='solution.js'></script>
+</body>
+</html>

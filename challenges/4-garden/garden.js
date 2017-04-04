@@ -16,6 +16,48 @@ function assert(test, message) {
   return true;
 }
 
+function Flower(name, color) {
+  this.name = name
+  this.color = color
+}
+
+Flower.prototype.identify = function() {
+  return `I am an ${this.name} and I am ${this.color}.`
+}
+
+function Garden(name, location) {
+  this.name = name
+  this.location = location
+  this.flowers = []
+}
+
+Garden.prototype.plant = function(flowers) {
+  that = this
+  flowers.forEach(function(flower) {
+    that.flowers.push(flower)
+  })
+}
+
+Garden.prototype.selectByColor = function(color) {
+  count = []
+  flowers.forEach(function(flower) {
+    if(flower.color === color) {
+      count.push(color)
+    }
+  })
+  return count
+}
+
+Garden.prototype.selectByName = function(name) {
+  count = []
+  flowers.forEach(function(flower) {
+    if(flower.name === name) {
+      count.push(name)
+    }
+  })
+  return count
+}
+
 var flowers = [
   new Flower("Aster", "red"),
   new Flower("Bird of Paradise", "orange"),
@@ -26,8 +68,10 @@ var flowers = [
   new Flower("Chrysanthemum", "yellow"),
 ];
 
-garden.plant(flowers);
 
+
+garden = new Garden("Kula Botanical Garden", "Makawao");
+garden.plant(flowers);
 
 assert(
   garden.name === "Kula Botanical Garden", "the garden has a name"
